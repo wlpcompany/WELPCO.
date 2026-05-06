@@ -96,7 +96,7 @@ function NavBar({ currentTab, navigateTo }: { currentTab: string; navigateTo: (t
   const isActive = (id: string) => currentTab === id || (currentTab === 'product-detail' && id === 'products');
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-ivory/80 backdrop-blur-xl border-b border-emerald border-opacity-10">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-ivory/70 backdrop-blur-2xl border-b border-emerald/5 shadow-[0_4px_30px_rgb(0,0,0,0.04)]">
       <div className="container mx-auto px-8 md:px-10 max-w-7xl">
         <div className="flex items-center justify-between h-24 md:h-28">
           {/* Logo */}
@@ -155,7 +155,7 @@ function NavBar({ currentTab, navigateTo }: { currentTab: string; navigateTo: (t
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden bg-ivory overflow-hidden"
+            className="md:hidden bg-ivory/80 backdrop-blur-2xl overflow-hidden border-t border-emerald/5"
           >
             <div className="flex flex-col items-center gap-8 py-10 font-serif font-light tracking-wide text-2xl">
               {navItems.map((item) => (
@@ -200,18 +200,14 @@ function HomeView({ navigateTo }: { key?: string, navigateTo: (tab: string, id?:
             className="w-full lg:w-1/2 space-y-6 md:space-y-8"
           >
             <div className="space-y-3 md:space-y-4">
-              <span className="text-[9px] md:text-xs uppercase tracking-[0.2em] opacity-70">
-                مجموعة العطور الفاخرة
+              <span className="text-sm md:text-base uppercase tracking-[0.3em] font-bold text-emerald font-sans dir-ltr inline-block">
+                WELPCO.
               </span>
               <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-serif leading-[1.2] font-light italic">
-                سحر الأناقة<br/>
-                <span className="not-italic font-bold">في كل رشة</span>
+                أضف المزيد من الفخامة<br/>
+                <span className="not-italic font-bold text-emerald border-b-2 border-emerald/30 pb-2">لحياتك</span>
               </h1>
             </div>
-            
-            <p className="text-sm md:text-lg leading-relaxed opacity-80 max-w-md">
-              نقدم لك مزيجاً فريداً من الروائح، مصممة خصيصاً لمن يقدرون التميز والرفاهية في كل تفاصيل يومهم.
-            </p>
             
             <div className="flex items-center gap-6 md:gap-8 pt-2 md:pt-4">
               <button 
@@ -326,7 +322,7 @@ function ProductsView({ navigateTo }: { key?: string, navigateTo: (tab: string, 
               />
             </div>
             
-            <div className="flex gap-8 overflow-x-auto w-full md:w-auto text-sm font-medium tracking-wide uppercase">
+            <div className="flex gap-6 md:gap-8 overflow-x-auto w-full md:w-auto text-sm font-medium tracking-wide uppercase bg-ivory/40 backdrop-blur-md border border-emerald/10 px-6 py-2.5 rounded-full shadow-[0_4px_20px_rgb(0,0,0,0.02)]">
               {[
                 { id: 'all', label: 'الكل' },
                 { id: 'perfumes', label: 'العطور' },
@@ -363,7 +359,7 @@ function ProductsView({ navigateTo }: { key?: string, navigateTo: (tab: string, 
                   onClick={() => navigateTo('product-detail', product.id)}
                   className="group cursor-pointer flex flex-col w-[90%] md:w-full mx-auto"
                 >
-                  <div className="relative aspect-[4/5] rounded-[80px] md:rounded-[100px] overflow-hidden bg-ivory-dark mb-6 md:mb-8 flex-shrink-0 flex items-center justify-center p-2 md:p-2.5">
+                  <div className="relative aspect-[4/5] rounded-[80px] md:rounded-[100px] overflow-hidden bg-ivory-dark/60 backdrop-blur-md border border-emerald/5 mb-6 md:mb-8 flex-shrink-0 flex items-center justify-center p-2 md:p-2.5 shadow-[0_8px_30px_rgb(0,0,0,0.04)]">
                     <div className="w-full h-full rounded-[72px] md:rounded-[92px] overflow-hidden relative">
                       <img 
                         src={product.image} 
@@ -472,7 +468,7 @@ function ProductDetailView({ productId, navigateTo }: { key?: string, productId:
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2, ease: easeLux }}
-            className="w-[85%] sm:w-[70%] md:w-1/2 relative aspect-[4/5] rounded-[90px] md:rounded-[120px] overflow-hidden bg-ivory-dark flex items-center justify-center p-3 md:p-4 shadow-xl mx-auto"
+            className="w-[85%] sm:w-[70%] md:w-1/2 relative aspect-[4/5] rounded-[90px] md:rounded-[120px] overflow-hidden bg-ivory-dark/60 backdrop-blur-xl border border-emerald/5 flex items-center justify-center p-3 md:p-4 shadow-[0_20px_50px_rgb(0,0,0,0.08)] mx-auto"
           >
             <div className="w-full h-full rounded-[82px] md:rounded-[110px] overflow-hidden relative">
               <img src={product.image} alt={product.name} className="w-full h-full object-cover" />
