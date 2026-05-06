@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Cairo:wght@300;400;600;800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #FCFBF4;
+  --color-ivory-dark: #F4F2E6;
+  --color-emerald-light: #0A634D;
+  --color-emerald: #044A39;
+  --color-emerald-dark: #022B21;
+
+  --font-sans: "Cairo", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Amiri", ui-serif, Georgia, serif;
+  
+  --radius-xl: 1.5rem;
+  --radius-2xl: 2rem;
+  --radius-[3rem]: 3rem;
+  --radius-[4rem]: 4rem;
+  --radius-[5rem]: 5rem;
+  --radius-[140px]: 140px;
+  --radius-[160px]: 160px;
+  --radius-full: 9999px;
+}
+
+body {
+  background-color: var(--color-ivory);
+  color: var(--color-emerald);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar for a luxurious feel */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-ivory);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-emerald-light);
+  border-radius: var(--radius-full);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-emerald);
+}
