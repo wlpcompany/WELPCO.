@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { ShoppingBag, Search, Menu, X, ArrowUpRight, Phone, Mail, Droplets, Gem, ArrowRight, Instagram, Share2 } from 'lucide-react';
 
-const easeLux = [0.22, 1, 0.36, 1];
+const easeLux: [number, number, number, number] = [0.22, 1, 0.36, 1];
 
 // --- Data ---
 const PRODUCTS = [
