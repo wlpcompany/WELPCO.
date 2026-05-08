@@ -5,7 +5,7 @@ import {defineConfig, loadEnv} from 'vite';
 
 export default defineConfig(({mode}) => {
   return {
-    base: './',
+    base: '/WELPCO/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
