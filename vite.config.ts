@@ -5,7 +5,7 @@ import {defineConfig, loadEnv} from 'vite';
 
 export default defineConfig(({mode}) => {
   return {
-    base: '/welpco/',
+    base: process.env.GITHUB_ACTIONS ? '/WELPCO/' : '/',
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
